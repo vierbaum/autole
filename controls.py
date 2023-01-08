@@ -12,16 +12,9 @@ motor = PWMLED(4)
 
 #sleep(1)
 
-def steer(direction):
-    if direction == "r":
-        servo.angle = 35
-        sleep(0.5)
-    elif direction == "l":
-        servo.angle = -35
-        sleep(0.5)
-    else:
-        servo.angle = 0
-        sleep(0.5)
+def steer(angle):
+    print(-angle)
+    servo.angle = -angle
 
 
 def drive(direction):
@@ -32,7 +25,6 @@ def drive(direction):
         GPIO.output(2, GPIO.LOW)
         GPIO.output(3, GPIO.HIGH)
     motor.value = 1
-    sleep(0.5)
 
 def stop():
     motor.value = 0
