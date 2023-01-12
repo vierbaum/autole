@@ -13,14 +13,15 @@ motor = PWMLED(4)
 #sleep(1)
 
 def steer(angle):
-    print(-angle)
     servo.angle = -angle
 
 
 def drive(direction):
+    print("DR")
     if direction == 1:
         GPIO.output(2, GPIO.HIGH)
         GPIO.output(3, GPIO.LOW)
+        print("F")
     else:
         GPIO.output(2, GPIO.LOW)
         GPIO.output(3, GPIO.HIGH)
