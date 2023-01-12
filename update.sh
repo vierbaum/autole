@@ -7,5 +7,5 @@ sudo systemctl enable autostart.service
 
 while true
 do
-    python server.py
+    python server.py > ~/log
 done
