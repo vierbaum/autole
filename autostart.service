@@ -1,0 +1,9 @@
+[Unit]
+Description=Start python script on startup
+
+[Service]
+Type=oneshot
+ExecStart=/home/pi/autole/update.sh
+
+[Install]
+WantedBy=multi-user.target
