@@ -75,7 +75,7 @@ while True:
 
     # Check if the angle is within a certain range
     if a > 35 and a < 135:
-    a = 35
+        a = 35
     if a >= 135:
         a = 180 - a
     if a < 0 and a < -35:
